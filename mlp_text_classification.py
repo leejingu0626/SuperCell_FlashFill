@@ -27,7 +27,7 @@ def clean(doc):
 
 print("There are 100 mails of following five classes on which K-NN classification and K-means clustering"
       " is performed : \n1. naver \n2. daum \n3. gmail \n4. tmax \n5. hotmail")
-path = "Sentences.txt"
+path = "Mails.txt"
 
 train_clean_sentences = []
 fp = open(path, 'r')
