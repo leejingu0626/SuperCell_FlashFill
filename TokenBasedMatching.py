@@ -5,11 +5,12 @@ from spacy.matcher import Matcher
 nlp = spacy.load("en_core_web_sm")
 matcher = Matcher(nlp.vocab)
 # Add match ID "HelloWorld" with no callback and one pattern
-pattern = [{"IS_PUNCT": True}]
-matcher.add("HelloWorld", [pattern])
+pattern = [{"IS_SPACE": True}]
+matcher.add("FlashFill Test", [pattern])
 
 # 문장을 nlp에 넘김
-doc = nlp("Hello, world! Hello world! backgu2002@ backgu2003@")
+# doc = nlp("Hello, world! Hello world! backgu2002@ backgu2003@")
+doc = nlp("PK1-2 Team Member JIngu_lee2")
 matches = matcher(doc)
 for match_id, start, end in matches:
     string_id = nlp.vocab.strings[match_id]  # Get string representation
